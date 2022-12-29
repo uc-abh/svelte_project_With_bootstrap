@@ -48,9 +48,7 @@
             unselected_ques+=1;
         }
     }
-    const handle_click=(event)=>{
-console.log(event);
-    }
+    
     
     </script>
     
@@ -59,31 +57,31 @@ console.log(event);
     <div class="container d-flex justify-content-center mt-4 flex-column align-items-center">
         <div class="d-flex" style="width: 800px;">
             <div
-                class="d-flex flex-column align-items-center btn  bg-opacity-25 border rounded w-50"
+                class="d-flex flex-column align-items-center btn  border rounded w-50"
               
             >
-                <p style="color: white">{percentage} %</p>
-                <h6>Result</h6>
+                <p class="text-info">{percentage} %</p>
+                <h6 class="text-info">Result</h6>
             </div>
             <div
                 class="d-flex flex-column align-items-center btn border rounded w-50  ms-3" >
-                <p class="text-white">11</p>
-                <h6>Total item</h6>
+                <p class="text-primary">11</p>
+                <h6 class="text-primary">Total item</h6>
             </div>
             <div
                 class="d-flex flex-column align-items-center btn border rounded w-50 ms-3">
-                <p class="text-white">{correct}</p>
-                <h6>Correct</h6>
+                <p class="text-success">{correct}</p>
+                <h6 class="text-success">Correct</h6>
             </div>
             <div
                 class="d-flex flex-column align-items-center btn border rounded w-50 ms-3">
-                <p class="text-white">{incorrect}</p>
-                <h6>Incorrect</h6>
+                <p class="text-danger">{incorrect}</p>
+                <h6 class="text-danger">Incorrect</h6>
             </div>
             <div
                 class="d-flex flex-column align-items-center btn border rounded w-50 ms-3" >
-                <p class="text-white">{unselected_ques}</p>
-                <h6>Unattempted</h6>
+                <p class="text-warning">{unselected_ques}</p>
+                <h6 class="text-warning">Unattempted</h6>
             </div>
         </div>
         <table class="table">
@@ -102,7 +100,7 @@ console.log(event);
                         <td>
                             <a  href = "review?qno={i+1}"
                                 class="w-100 text-decoration-none text-white {i}"
-                                on:click={handle_click} >
+                                 >
                                 {data.snippet}
                             </a>
                         </td>
@@ -112,20 +110,18 @@ console.log(event);
                                     class="{`${
                                     correctanswer_arr[i] == j ? 'bg-success' : ''
                                     }`}   border d-flex justify-content-center align-items-center ms-2  text-white rounded"
-                                    class:selected={correctanswer_arr[i] != chhosenanswerbystudent_arr[i] &&
-                                    chhosenanswerbystudent_arr[i] == j ? true : false}
-                                     style="width: 24px; height:24px" >
+                                     style="width: 24px; height:24px " >
                                     {String.fromCharCode(65 + j)}
                                 </p>
                             {/each}
                         </td>
                         <td>
                             {#if chhosenanswerbystudent_arr[i] == correctanswer_arr[i]}
-                                <span>Correct</span>
+                                <span class="text-success">Correct</span>
                             {:else if chhosenanswerbystudent_arr[i] == null}
-                                <span>Unattempted</span>
+                                <span class="text-warning">Unattempted</span>
                             {:else}
-                                <span>Incorrect</span>
+                                <span class="text-danger">Incorrect</span>
                             {/if}
                         </td>
                     </tr>

@@ -7,11 +7,12 @@
 	export let show = false;
 	let total_attempted = 0;
 	afterUpdate(() => {
-		let data = $choosingans_store.filter(Boolean);
+		let data = $choosingans_store;
 		total_attempted = data.length;
 	});
 	const displayQues = (i) => {
 		dispatch('displayQuesNum', i);
+
 	};
 </script>
 
@@ -33,7 +34,14 @@
 			>
 				<span class="text-white fw-bold ">{i + 1}. </span>
 				<span> {data.snippet}</span>
+				{#if $choosingans_store[i]==null}
+				<span class="badge rounded-pill text-bg-warning">Unattempted</span>
+			{:else}
+			<span class="badge rounded-pill text-bg-success">Attempted</span>
+			{/if}
 			</span>
+			
+
 		{/each}
 		</nav>
 {/if}
