@@ -15,7 +15,7 @@ onMount(async()=>{
 });
 </script>
 
-<div>
+<div class="mycontainer">
     <Header/>
     <div class="container mt-3">
         {#each all_questions as data, i}
@@ -55,3 +55,9 @@ onMount(async()=>{
 		current_question = event.detail;
 		}}/>
 </div>
+
+<style>
+    .mycontainer{
+        min-width: 828px !important;
+    }
+</style>

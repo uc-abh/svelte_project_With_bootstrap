@@ -52,7 +52,7 @@
     
     </script>
     
-    <div>
+    <div class="mycontainer">
     <Header />
     <div class="container d-flex justify-content-center mt-4 flex-column align-items-center">
         <div class="d-flex" style="width: 800px;">
@@ -130,5 +130,12 @@
         </table>
     </div>
     </div>
+
+
+    <style>
+        .mycontainer{
+            min-width: 1240px !important;
+        }
+    </style>
     
     

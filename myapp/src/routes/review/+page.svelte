@@ -10,7 +10,7 @@
         question_no = new URL(location.href).searchParams.get("qno");
     });
 </script>
-<div>
+<div class="mycontainer">
     <Header/>
     <div class="container ">
         {#each all_questions as data, i}
@@ -64,5 +64,9 @@
         content: attr(no);
         text-transform: uppercase;
     }
+    
+.mycontainer{
+    min-width: 925px !important;
+}
 </style>
 
