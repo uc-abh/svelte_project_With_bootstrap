@@ -7,7 +7,7 @@
 	export let show = false;
 	let total_attempted = 0;
 	afterUpdate(() => {
-		let data = $choosingans_store;
+		let data = $choosingans_store.filter(Boolean);
 		total_attempted = data.length;
 	});
 	const displayQues = (i) => {
