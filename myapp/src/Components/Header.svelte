@@ -2,10 +2,19 @@
 	<div class="container-fluid">
 		<a class="navbar-brand position-absolute" href="/">
 			<img
-			src="https://www.ucertify.com/layout/themes/bootstrap4/images/logo/ucertify_logo.png"
+			src="../images/ucertify_logo.png" class="ucertify_logo"
 			alt="logo"
 			/>
 		</a>
-		<h3 class="mx-auto">uCertify Test Prep</h3>
+		<h2 class="mx-auto">uCertify Test Prep</h2>
 	</div>
 </nav>
+<style>
+	.ucertify_logo{
+		height: 35px;
+		width: 130px;
+		margin-top: 1px !important;
+		margin-bottom: 2px !important;
+		margin: 5px;
+	}
+</style>

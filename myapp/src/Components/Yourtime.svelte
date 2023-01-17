@@ -22,16 +22,16 @@
 		
 	</p>
 {:else}
-	<p class="m-0">
+	
 		{#if minutes.toString().length > 1}
-			<span>{minutes}:</span>
+			{minutes}:
 		{:else}
-			<span>0{minutes}:</span>
+			0{minutes}:
 		{/if}
 		{#if seconds.toString().length > 1}
-			<span>{seconds}</span>
+			{seconds}
 		{:else}
-			<span>0{seconds}</span>
+			0{seconds}
 		{/if}
-	</p>
+	
 {/if}

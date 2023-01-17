@@ -1,5 +1,5 @@
 <script>
-	import Header from '../../components/Header.svelte';
+	import Header from '../../Components/Header.svelte';
 	import Footer from '../../Components/Reviewfooter.svelte';
     import {onMount} from 'svelte';
     let question_no;

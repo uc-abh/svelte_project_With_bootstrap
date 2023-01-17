@@ -1,5 +1,5 @@
 <script>
-    import Header from "../components/Header.svelte";
+    import Header from "../Components/Header.svelte";
     </script>
     <Header/>
     <div class=" d-flex min-vh-100 justify-content-center align-items-center mycontainer">

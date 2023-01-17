@@ -31,15 +31,17 @@
 			on:click={prevPage}
 			class="btn btn-dark"
 			disabled={parseInt(question_no) <= 1 ? true : false}>Previous</button>
-				<span class="text-white">{parseInt(question_no)} of 11</span>
+      <button class="btn btn-dark">
+				{parseInt(question_no)} of 11
+        </button>
 		<button
 			on:click={nextPage}
 			class="btn btn-dark"
 			disabled={parseInt(question_no)> 10 ? true : false}>Next</button>
-              <a href="/">
+              <a class="bg-light" href="/">
             <button  class="btn btn-dark">Dashboard</button>
               </a>
-              <a href="/result">
+              <a class="bg-light" href="/result">
              <button  class="btn btn-dark">Result</button>
               </a>
       </div>

@@ -1,8 +1,8 @@
 <script>
-import Header from "../../components/Header.svelte";
+import Header from "../../Components/Header.svelte";
 import {questiondata_store,choosingans_store} from "../../store/stores";
 import {onMount} from 'svelte';
-import Footer from "../../Components/Testfooter.svelte"
+	import Testfooter from "../../Components/Testfooter.svelte";
 let all_questions =[];
 let choosen_answer=[];
 let current_question = 0;
@@ -47,7 +47,7 @@ onMount(async()=>{
 </div>
 
 <div class="position-fixed w-50  bg-dark text-white" style="bottom:15px;right:15px">
-    <Footer
+    <Testfooter
     {current_question}
     on:prevPage={() => (current_question = current_question - 1)}
     on:nextPage={() => (current_question = current_question + 1)}

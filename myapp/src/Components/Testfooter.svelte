@@ -23,7 +23,10 @@
 
 <div>
 	<div class="d-flex justify-content-between p-2 align-items-center bg-white border border-dark text-white">
+		<button class="btn btn-dark">
 			<Timer />
+		</button >
+			
 		<button on:click={() => (sidebar_show = !sidebar_show)} class="btn btn-dark" >
 			List
 		</button>
@@ -33,7 +36,9 @@
 			on:click={prevPage}
 			class="btn btn-dark"
 			disabled={current_question < 1 ? true : false}>Previous</button>
-				<span class="text-white">{current_question + 1} of 11</span>
+			<button class="btn btn-dark">
+				{current_question + 1} of 11
+			</button>
 		<button
 			on:click={nextPage}
 			class="btn btn-dark"
