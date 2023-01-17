@@ -1,6 +1,6 @@
 <script>
 	import { tweened } from 'svelte/motion';
-	let original = 5* 60; 
+	let original = 5 * 60;
 	let timer = tweened(original);
 	setInterval(() => {
 		if ($timer > 0) $timer--;
@@ -8,6 +8,7 @@
 	$: minutes = Math.floor($timer / 60);
 	$: seconds = Math.floor($timer - minutes * 60);
 </script>
+
 {#if minutes == 0 && seconds == 0}
 	<div
 		class="position-fixed top-50 start-50 d-flex justify-content-center align-items-center w-100 h-100"
@@ -18,20 +19,16 @@
 			<a href="/result"><button class="btn btn-dark">See Your Result</button></a>
 		</div>
 	</div>
-	<p class="m-0">
-		
-	</p>
+	<p class="m-0" />
 {:else}
-	
-		{#if minutes.toString().length > 1}
-			{minutes}:
-		{:else}
-			0{minutes}:
-		{/if}
-		{#if seconds.toString().length > 1}
-			{seconds}
-		{:else}
-			0{seconds}
-		{/if}
-	
+	{#if minutes.toString().length > 1}
+		{minutes}:
+	{:else}
+		0{minutes}:
+	{/if}
+	{#if seconds.toString().length > 1}
+		{seconds}
+	{:else}
+		0{seconds}
+	{/if}
 {/if}
