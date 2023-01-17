@@ -11,7 +11,7 @@
 </nav>
 <style>
 	.ucertify_logo{
-		height: 35px;
+		height: 34px;
 		width: 130px;
 		margin-top: 1px !important;
 		margin-bottom: 2px !important;

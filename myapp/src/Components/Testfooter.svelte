@@ -34,6 +34,7 @@
 	
 		<button
 			on:click={prevPage}
+			on:click={()=>(sidebar_show=false)}
 			class="btn btn-dark"
 			disabled={current_question < 1 ? true : false}>Previous</button>
 			<button class="btn btn-dark">
@@ -41,6 +42,7 @@
 			</button>
 		<button
 			on:click={nextPage}
+			on:click={()=>(sidebar_show=false)}
 			class="btn btn-dark"
 			disabled={current_question + 1 > 10 ? true : false}>Next</button>
 		
